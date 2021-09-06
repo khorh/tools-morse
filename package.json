@@ -1,0 +1,24 @@
+{
+  "name": "tools-morse",
+  "version": "1.0.0",
+  "description": "A tool to covert English into Morse code",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khorh/tools-morse-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khorh/tools-morse-code/issues"
+  },
+  "homepage": "https://github.com/khorh/tools-morse-code#readme",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "jest": "^27.1.0"
+  }
+}
