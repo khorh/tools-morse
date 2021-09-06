@@ -3,8 +3,8 @@
  * @param {*} inputValue
  * @returns {string} input value as lower case alphabet and no change to numbers 
  */
-const lowerCaseInputValue = (inputValue) => {
+const sanitiseInputValue = (inputValue) => {
     return inputValue.toLowerCase();
 };
 
-export default lowerCaseInputValue;
+export default sanitiseInputValue;
