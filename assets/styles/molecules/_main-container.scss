@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+/* main container */
+
+.main-container {
+  margin: 32px 0 64px;
+  border-radius: 8px;
+  padding: 16px 32px 32px;
+  background-color: $color-neutral-light;
+  color: $color-primary-main;
+  display: flex;
+  justify-content: space-between;
+}

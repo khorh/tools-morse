@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+/* typography */
+h1, h2, h3, h4, h5, p, li {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+h2 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+p {
+  font-size: 0.5rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+  margin-bottom: 16px;
+}
+
+li {
+  font-size: 0.5rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+}

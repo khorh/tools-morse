@@ -9,26 +9,28 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
     />
+    <link rel="stylesheet" href="./assets/styles/styles.css" type="text/css" />
     <script src="./assets/scripts/app.js" type="module" defer></script>
   </head>
   <body>
-    <header>
+    <header class="header-container">
       <h1>Morse Code</h1>
-      <h2>Instructions</h2>
-      <p>The morse code translator only accepts the following values:</p>
+      <h3>Instructions</h3>
+      <p>The morse code translator tool only accepts the following values:</p>
       <ul>
         <li>a-z</li>
         <li>A-Z</li>
         <li>0-9</li>
         <li>spaces</li>
       </ul>
+      <p>Note: Special characters such as !@£$%^&* are not allowed.</p>
     </header>
-    <main>
-      <section>
+    <main class="main-container">
+      <section class="section-container">
         <h2>Input</h2>
-        <textarea id="input"></textarea>
+        <textarea id="input" class="text-area" rows="16" placeholder="Enter in English based on the instructions above"></textarea>
       </section>
-      <section>
+      <section class="section-container">
         <h2>Output</h2>
         <p id="output"></p>
       </section>

@@ -1,0 +1,91 @@
+/* font-families */
+/* colors */
+/* text area */
+.text-area {
+  width: 90%;
+  resize: none;
+  border: 1px solid #202020;
+  padding: 16px;
+}
+
+/* typography */
+h1, h2, h3, h4, h5, p, li {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+h2 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+p {
+  font-size: 0.5rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+  margin-bottom: 16px;
+}
+
+li {
+  font-size: 0.5rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+}
+
+/* header container */
+.header-container > h1 {
+  text-align: center;
+}
+.header-container > ul {
+  padding-left: 32px;
+  margin-bottom: 16px;
+}
+
+/* main container */
+.main-container {
+  margin: 32px 0 64px;
+  border-radius: 8px;
+  padding: 16px 32px 32px;
+  background-color: #ffffff;
+  color: #202020;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* section container */
+.section-container {
+  width: 50%;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  background-color: #202020;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+body {
+  max-width: 1232px;
+  padding: 0 32px;
+  margin: 32px auto 64px;
+}
+
+/*# sourceMappingURL=styles.css.map */

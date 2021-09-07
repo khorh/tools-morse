@@ -1,0 +1,12 @@
+/* header container */
+
+.header-container {
+  & > h1 {
+    text-align: center;
+  }
+
+  & > ul {
+    padding-left: 32px;
+    margin-bottom: 16px;
+  }
+}

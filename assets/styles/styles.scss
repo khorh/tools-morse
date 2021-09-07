@@ -1,0 +1,22 @@
+@use "./abstracts" as *;
+@use "./atoms";
+@use "./molecules";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  background-color: $color-primary-main;
+  font-size: 32px;
+  font-family: $font-family-primary;
+  color: $color-neutral-light;
+}
+
+body {
+  max-width: 1232px;
+  padding: 0 32px;
+  margin: 32px auto 64px;
+}
