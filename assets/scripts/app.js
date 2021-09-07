@@ -1,6 +1,6 @@
 import { sanitiseInput, convertEnglishToMorse, getInputLastCharacter } from "./translator.js";
 
-let input = "";
+let output = "";
 
 document.querySelector("#input").addEventListener("keyup", () => {
     // From the document, get the input value inputted into the text area
@@ -16,8 +16,8 @@ document.querySelector("#input").addEventListener("keyup", () => {
     const changeEnglishToMorse = convertEnglishToMorse(sanitisedInput);
 
     // Add the last character into the global variable
-    input += changeEnglishToMorse;
+    output += changeEnglishToMorse;
 
     // Display the morse code
-    document.querySelector("#output").innerText = input;
+    const displayOutput = document.querySelector("#output").innerText = output;
 });

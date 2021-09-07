@@ -66,7 +66,6 @@ const convertEnglishToMorse = (sanitisedInput) => {
     // reformat object to a multi-dimensional array of key value pairs
     const morseCodesCopy = {...morseCodes};
     const morseCodesAsArray = Object.entries(morseCodesCopy);
-    console.log(morseCodesAsArray);
     
     // filter multi-dimensional array to the input value
     const morseCodesFiltered = morseCodesAsArray.filter(morseCode => morseCode.includes(sanitisedInput))
