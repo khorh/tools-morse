@@ -5,7 +5,16 @@
  */
 const getInputLastCharacter = (getInput) => {
     return getInput.charAt(getInput.length-1);
-}
+};
+
+const validateInput = (inputLastCharacter) => {
+    const morseRegex = /[\w\s]/g;
+    if (inputLastCharacter === morseRegex) {
+        return inputLastCharacter;
+    } else {
+        return "Invalid character"
+    };
+};
 
 /**
  * Function to sanitise the last character of the input value if it is an alphabet
@@ -78,4 +87,4 @@ const convertEnglishToMorse = (sanitisedInput) => {
     };
 };
 
-export { getInputLastCharacter, sanitiseInput, convertEnglishToMorse };
+export { getInputLastCharacter, validateInput, sanitiseInput, convertEnglishToMorse };

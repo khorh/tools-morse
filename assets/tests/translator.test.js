@@ -1,4 +1,4 @@
-import { getInputLastCharacter, sanitiseInput, convertEnglishToMorse } from "../scripts/translator.js";
+import { getInputLastCharacter, sanitiseInput, convertEnglishToMorse, validateInput } from "../scripts/translator.js";
 
 // Tests for the function getInputLastCharacter
 describe("Get the last character of the input value", () => {
@@ -21,6 +21,18 @@ describe("Get the last character of the input value", () => {
     test("cat in the hat should return t", () => {
         expect(getInputLastCharacter("cat in the hat")).toMatch("t");
     })
+});
+
+// Tests for the function validateInput
+describe("Check if the value is a-z, A-Z, 0-9 or space", () => {
+    // Test for a valid character
+    test("a should return a", () => {
+        expect(validateInput("a")).toMatch("a");
+    });
+    // Test for an invalid character
+    test("@ should return Invalid character", () => {
+        expect(validateInput("@")).toMatch("Invalid character");
+    });
 });
 
 // Tests for the function sanitiseInput
