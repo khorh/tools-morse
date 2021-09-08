@@ -30,24 +30,9 @@ describe("Convert value which is an alphabet character into lower case", () => {
         expect(sanitiseInput("A")).toMatch("a");
     });
 
-    // Test for a word
-    test("Friend should return friend", () => {
-        expect(sanitiseInput("FRIEND")).toMatch("friend");
-    });
-
-    // Test for a phrase
-    test("URGENT PLEASE CALL should return urgent please call", () => {
-        expect(sanitiseInput("URGENT PLEASE CALL")).toMatch("urgent please call");
-    });
-
-    // Test for numbers only
-    test("0123456789 should return 0123456789", () => {
-        expect(sanitiseInput("0123456789")).toMatch("0123456789");
-    });
-
-    // Test for a mixture of letters and numbers
-    test("Abc123 should return abc123", () => {
-        expect(sanitiseInput("Abc123")).toMatch("abc123");
+    // Test for a single character which is a number
+    test("1 should return 1", () => {
+        expect(sanitiseInput("1")).toMatch("1");
     });
 });
 
@@ -62,14 +47,4 @@ describe("Convert sanitised value to morse code", () => {
     test("1 should return -----", () => {
         expect(convertEnglishToMorse("1").match("-----"));
     });
-
-    // Test for a word
-    test("ball should return -....-.-...-..", () => {
-        expect(convertEnglishToMorse("ball")).match("-....-.-...-..");
-    })
-
-    // Test for a phrase
-    test("cat in the hat should return -.-..-- ..-. -..... .....--", () => {
-        expect(convertEnglishToMorse("cat in the hat")).match("-.-..-- ..-. -..... .....--");
-    })
 });
