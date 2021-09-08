@@ -1,6 +1,6 @@
 /**
  * Function to get the last character of the input value
- * @param {*} getInput 
+ * @param {*} getInput
  * @returns {string} the last character of the input value
  */
 const getInputLastCharacter = (getInput) => {
@@ -14,7 +14,7 @@ const getInputLastCharacter = (getInput) => {
  */
 const validateInput = (inputLastCharacter) => {
     const morseRegex = /[\w\s]/g;
-    if (inputLastCharacter === morseRegex) {
+    if (inputLastCharacter.match(morseRegex)) {
         return inputLastCharacter;
     } else {
         return "Invalid character"
@@ -23,11 +23,11 @@ const validateInput = (inputLastCharacter) => {
 
 /**
  * Function to sanitise the last character of the input value if it is an alphabet
- * @param {*} inputLastCharacter
+ * @param {*} validatedInput
  * @returns {string} last character of the input value in lower case alphabet unless it is a number 
  */
-const sanitiseInput = (inputLastCharacter) => {
-    return inputLastCharacter.toLowerCase();
+const sanitiseInput = (validatedInput) => {
+    return validatedInput.toLowerCase();
 };
 
 /**

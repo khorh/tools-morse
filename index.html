@@ -4,9 +4,10 @@
     <title>Helen Khor | UX Engineer | Portfolio - Tools - Morse Code</title>
     <meta name="description" content="A morse code tool" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/styles.css" type="text/css" />
     <script src="./assets/scripts/app.js" type="module" defer></script>
   </head>
@@ -14,7 +15,7 @@
     <header class="header-container">
       <h1>Morse Code</h1>
       <h2>-----.-... -.-.---..</h2>
-      <hr class="divider"/>
+      <hr class="divider" />
       <h3>Instructions</h3>
       <p>The morse code translator tool only accepts the following values:</p>
       <ul>
@@ -23,12 +24,20 @@
         <li>0-9</li>
         <li>spaces</li>
       </ul>
-      <p>Note: Special characters such as !@£$%^&* does not exist in morse code.</p>
+      <p>
+        Note: Special characters such as !@£$%^&* does not exist in morse code.
+      </p>
     </header>
     <main class="main-container">
       <section class="section-container">
         <h2>Input</h2>
-        <textarea id="input" class="text-area" rows="16" placeholder="Enter in English based on the instructions above"></textarea>
+        <textarea
+          id="input"
+          class="text-area"
+          rows="16"
+          placeholder="Enter in English based on the instructions above"
+        ></textarea>
+        <p id="errorMessage"></p>
         <button id="clear" class="button">Clear</button>
       </section>
       <section class="section-container">

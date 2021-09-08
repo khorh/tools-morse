@@ -1,4 +1,4 @@
-import { sanitiseInput, convertEnglishToMorse, getInputLastCharacter } from "./translator.js";
+import { validateInput, sanitiseInput, convertEnglishToMorse, getInputLastCharacter } from "./translator.js";
 
 let output = "";
 
@@ -9,17 +9,25 @@ document.querySelector("#input").addEventListener("keyup", () => {
     // From the input value, get the last character in the string
     const inputLastCharacter = getInputLastCharacter(getInput);
 
-    // Sanitise the input value
-    const sanitisedInput = sanitiseInput(inputLastCharacter);
+    // Validate the input value
+    const validatedInput = validateInput(inputLastCharacter);
 
-    // Convert English to morse code
-    const changeEnglishToMorse = convertEnglishToMorse(sanitisedInput);
+    // Display error message if it is not a valid character, otherwise carry on with other functions
+    if (validatedInput !== inputLastCharacter) {
+        document.querySelector("#errorMessage").innerText = validatedInput;
+    } else {
+        // Sanitise the input value
+        const sanitisedInput = sanitiseInput(validatedInput);
 
-    // Add the last character into the global variable
-    output += changeEnglishToMorse;
+        // Convert English to morse code
+        const changeEnglishToMorse = convertEnglishToMorse(sanitisedInput);
 
-    // Display the morse code
-    const displayOutput = document.querySelector("#output").innerText = output;
+        // Add the last character into the global variable
+        output += changeEnglishToMorse;
+
+        // Display the morse code
+        document.querySelector("#output").innerText = output;
+    };
 });
 
 document.querySelector("#clear").addEventListener("click", () => {
