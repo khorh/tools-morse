@@ -1,5 +1,23 @@
 /* font-families */
 /* colors */
+/* button */
+.button {
+  cursor: pointer;
+  border: 1px solid #202020;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  font-size: 0.4375rem;
+  font-weight: 500;
+  line-height: 0.5625rem;
+}
+.button:hover {
+  font-weight: 600;
+}
+.button:active {
+  font-weight: 600;
+}
+
 /* divider */
 .divider {
   border-bottom: 2px solid #ffffff;
