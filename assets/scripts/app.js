@@ -21,3 +21,7 @@ document.querySelector("#input").addEventListener("keyup", () => {
     // Display the morse code
     const displayOutput = document.querySelector("#output").innerText = output;
 });
+
+document.querySelector("#clear").addEventListener("click", () => {
+    location.reload();
+})
