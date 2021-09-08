@@ -1,4 +1,4 @@
-import { getInputLastCharacter, sanitiseInput, convertEnglishToMorse, validateInput } from "../scripts/translator.js";
+import { getInputLastCharacter, validateInput, sanitiseInput, convertEnglishToMorse } from "../scripts/translator.js";
 
 // Tests for the function getInputLastCharacter
 describe("Get the last character of the input value", () => {

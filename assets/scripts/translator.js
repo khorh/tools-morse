@@ -7,6 +7,11 @@ const getInputLastCharacter = (getInput) => {
     return getInput.charAt(getInput.length-1);
 };
 
+/**
+ * Function to validate the last character of the input value
+ * @param {*} inputLastCharacter
+ * @returns {string} either the valid character or Invalid character message
+ */
 const validateInput = (inputLastCharacter) => {
     const morseRegex = /[\w\s]/g;
     if (inputLastCharacter === morseRegex) {
