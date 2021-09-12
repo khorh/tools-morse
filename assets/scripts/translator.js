@@ -1,32 +1,13 @@
-// /**
-//  * Function to get the last character of the input value
-//  * @param {*} getInput
-//  * @returns {string} the last character of the input value
-//  */
-// const getInputLastCharacter = (getInput) => {
-//     return getInput.charAt(getInput.length-1);
-// };
-
-// /**
-//  * Function to validate the last character of the input value
-//  * @param {*} inputLastCharacter
-//  * @returns {string} either the valid character or Invalid character message
-//  */
-// const validateInput = (inputLastCharacter) => {
-//     const morseRegex = /[\w\s]/g;
-//     if (inputLastCharacter.match(morseRegex)) {
-//         return inputLastCharacter;
-//     } else {
-//         return "Invalid character"
-//     };
-// };
-
+/**
+ * Function to check if any of the input characters is a-z, A-Z, 0-9 and space
+ * @param getInput
+ * @return {boolean} true is when ALL input characters meets the criteria and false is the opposite
+ */
 const validateInput = (getInput) => {
     let resultFromInputWithRegex = [];
 
     const morseCodeRegex = /[a-zA-Z0-9 ]/;
 
-    // check if any of the input characters does not adhere to the regex
     for (let inputItem of getInput) {
         const testInputWithRegex = morseCodeRegex.test(inputItem);
         resultFromInputWithRegex.push(testInputWithRegex);
