@@ -3,4 +3,8 @@
 /* section container */
 .section-container {
   width: 50%;
+
+  &:nth-child(2) {
+    margin-left: 16px;
+  }
 }

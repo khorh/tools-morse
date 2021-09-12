@@ -1,41 +1,66 @@
-/**
- * Function to get the last character of the input value
- * @param {*} getInput
- * @returns {string} the last character of the input value
- */
-const getInputLastCharacter = (getInput) => {
-    return getInput.charAt(getInput.length-1);
+// /**
+//  * Function to get the last character of the input value
+//  * @param {*} getInput
+//  * @returns {string} the last character of the input value
+//  */
+// const getInputLastCharacter = (getInput) => {
+//     return getInput.charAt(getInput.length-1);
+// };
+
+// /**
+//  * Function to validate the last character of the input value
+//  * @param {*} inputLastCharacter
+//  * @returns {string} either the valid character or Invalid character message
+//  */
+// const validateInput = (inputLastCharacter) => {
+//     const morseRegex = /[\w\s]/g;
+//     if (inputLastCharacter.match(morseRegex)) {
+//         return inputLastCharacter;
+//     } else {
+//         return "Invalid character"
+//     };
+// };
+
+const validateInput = (getInput) => {
+    let resultFromInputWithRegex = [];
+
+    const morseCodeRegex = /[a-zA-Z0-9 ]/;
+
+    // check if any of the input characters does not adhere to the regex
+    for (let inputItem of getInput) {
+        const testInputWithRegex = morseCodeRegex.test(inputItem);
+        resultFromInputWithRegex.push(testInputWithRegex);
+    }
+
+    return resultFromInputWithRegex.includes(false) ? false : true;;
 };
 
 /**
- * Function to validate the last character of the input value
- * @param {*} inputLastCharacter
- * @returns {string} either the valid character or Invalid character message
+ * Function to sanitise the input values if it is an alphabet (not applicable for numbers)
+ * @param {string} getInput
+ * @returns {string} input value is in lower case alphabets
  */
-const validateInput = (inputLastCharacter) => {
-    const morseRegex = /[\w\s]/g;
-    if (inputLastCharacter.match(morseRegex)) {
-        return inputLastCharacter;
-    } else {
-        return "Invalid character"
-    };
+const sanitiseInput = (getInput) => {
+    return getInput.toLowerCase();
 };
 
 /**
- * Function to sanitise the last character of the input value if it is an alphabet
- * @param {*} validatedInput
- * @returns {string} last character of the input value in lower case alphabet unless it is a number 
+ * Function to split the sanitised input value into an array
+ * @param {string} sanitisedInput
+ * @return {array} an array containing individual alphabets, numbers or spaces
  */
-const sanitiseInput = (validatedInput) => {
-    return validatedInput.toLowerCase();
+const splitInputStringToArr = (sanitisedInput) => {
+    return sanitisedInput.split("");
 };
 
 /**
- * Function to convert the sanitised character from English to morse code
- * @param {*} sanitisedInput 
- * @returns {string} the morse code based on the sanitised character
+ * Function to convert the input array from English to morse code
+ * @param {*} inputArr
+ * @returns {string} the morse code translation for all characters
  */
-const convertEnglishToMorse = (sanitisedInput) => {
+const convertEnglishToMorse = (inputArr) => {
+    let output = "";
+
     // object containing morse codes
     const morseCodes = {
         'a': '.-',
@@ -76,20 +101,14 @@ const convertEnglishToMorse = (sanitisedInput) => {
         '0': '-----',
         ' ': ' '
     }
-    
-    // reformat object to a multi-dimensional array of key value pairs
-    const morseCodesCopy = {...morseCodes};
-    const morseCodesAsArray = Object.entries(morseCodesCopy);
-    
-    // filter multi-dimensional array to the input value
-    const morseCodesFiltered = morseCodesAsArray.filter(morseCode => morseCode.includes(sanitisedInput))
-    
-    // access the values from the filtered multi-dimensional array
-    const morseCode = morseCodesFiltered.values();
-    
-    for (const value of morseCode) {
-        return value[1];
-    };
+
+    // for loop the input array and return the morse code for each character
+    for (const inputItem of inputArr) {
+        const inputItemToMorseCode = morseCodes[inputItem];
+        output += inputItemToMorseCode;
+    }
+
+    return output;
 };
 
-export { getInputLastCharacter, validateInput, sanitiseInput, convertEnglishToMorse };
+export { validateInput, sanitiseInput, splitInputStringToArr, convertEnglishToMorse };

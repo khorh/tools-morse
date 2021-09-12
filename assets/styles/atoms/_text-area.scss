@@ -2,9 +2,10 @@
 
 /* text area */
 .text-area {
-  width: 90%;
+  width: 100%;
   resize: none;
   border: 1px solid $color-primary-main;
+  border-radius: 4px;
   padding: 16px;
   font-size: 0.5rem;
 }

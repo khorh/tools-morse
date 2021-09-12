@@ -20,15 +20,16 @@
 
 /* divider */
 .divider {
-  border-bottom: 3px solid #e75480;
+  border-bottom: 3px solid #ffffff;
   margin-bottom: 32px;
 }
 
 /* text area */
 .text-area {
-  width: 90%;
+  width: 100%;
   resize: none;
   border: 1px solid #202020;
+  border-radius: 4px;
   padding: 16px;
   font-size: 0.5rem;
 }
@@ -65,14 +66,16 @@ p {
   margin-bottom: 8px;
 }
 
-p.error-message {
-  color: #e75480;
-}
-
 li {
   font-size: 0.5rem;
   font-weight: 400;
   line-height: 0.75rem;
+}
+
+/* button container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* header container */
@@ -87,8 +90,8 @@ li {
 /* main container */
 .main-container {
   margin: 32px 0 64px;
-  border-radius: 8px;
-  padding: 16px 32px 32px;
+  border-radius: 4px;
+  padding: 32px 32px 48px;
   background-color: #ffffff;
   color: #202020;
   display: flex;
@@ -98,6 +101,9 @@ li {
 /* section container */
 .section-container {
   width: 50%;
+}
+.section-container:nth-child(2) {
+  margin-left: 16px;
 }
 
 * {
