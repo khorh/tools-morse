@@ -13,7 +13,7 @@ const validateInput = (getInput) => {
         resultFromInputWithRegex.push(testInputWithRegex);
     }
 
-    return resultFromInputWithRegex.includes(false) ? false : true;;
+    return resultFromInputWithRegex.includes(false) ? false : true;
 };
 
 /**
