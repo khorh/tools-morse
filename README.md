@@ -35,3 +35,6 @@ A screen showing the header, instructions, input in English and output in morse 
     - validating the input in English i.e only allow a-z, A-Z and 0-9,
     - sanitising the input in English i.e. to lower case for A-Z, and
     - converting the sanitised input into morse code.
+
+#### 3.5 JEST
+- Testing considers different scenarios. For example, validating inputs included tests for ABCDEFG, !@£$%^& and ABCD%^&.
