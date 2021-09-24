@@ -19,6 +19,7 @@ A screen showing the header, instructions, input in English and output in morse 
 - Javascript
 - JEST
 - Babel
+- NPM
 - IDE PHP Storm
 
 #### 3.2 HTML/HTML5
@@ -30,11 +31,16 @@ A screen showing the header, instructions, input in English and output in morse 
     - B.E.M methodology for naming classes.
 
 #### 3.4 Javascript
-- Uses TDD to develop the tool before functionalities.
 - Functionalities include:
     - validating the input in English i.e only allow a-z, A-Z and 0-9,
-    - sanitising the input in English i.e. to lower case for A-Z, and
+    - sanitising the input in English i.e. to lower case for A-Z,
+    - splitting words to allow for looping over the object containing the morse code, and
     - converting the sanitised input into morse code.
 
 #### 3.5 JEST
-- Testing considers different scenarios. For example, validating inputs included tests for ABCDEFG, !@£$%^& and ABCD%^&.
+- Uses TDD to develop the tool before functionalities.
+- Testing considers different scenarios including:
+  - validating inputs i.e. 'ABCDEFG', '!@£$%^&' and 'ABCD%^&', 
+  - sanitising inputs i.e. 'A', '1', 'Please', 'Please call NOW',
+  - splitting words becomes an array and 'urgent' becomes ["u", "r", "g", "e", "n", "t"], and
+  - conversion of English i.e. 'a', '1', 'please' and 'please call now' to morse code.
