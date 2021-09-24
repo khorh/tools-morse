@@ -1,7 +1,7 @@
 {
   "name": "tools-morse",
   "version": "1.0.0",
-  "description": "A tool to covert English into Morse code",
+  "description": "A Javascript based morse code tool to translate English into morse code",
   "main": "index.js",
   "scripts": {
     "test": "jest"
